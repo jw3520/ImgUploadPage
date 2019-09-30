@@ -35,6 +35,7 @@ var count = 0;
 				input_reset();
 				return false;
 			}
+			$('#img_list').append('<img src="' + ext + '" width="100px" height="100px">');
 			$('#img_list').append('<div>' + file.name + '</div>');
 			$('#count').text(++count);
 		}
