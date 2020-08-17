@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>이미지 업로드</title>
+<title>이미지 업로드 구현 과제</title>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 <script>
@@ -69,15 +69,25 @@ var count = 0;
 font {
 	color: gray;
 }
+table {
+	border: 1px solid black;
+	padding: 10px 25px 10px 10px;
+}
 </style>
 </head>
 <body>
+	<h1>이미지 업로드 구현 과제</h1>
 	<div id="wrap">
-		<ul>
-			<li>최소 5개 최대 30개의 이미지</li>
-			<li>이미지 크기는 408 x 408</li>
-			<li>png 또는 gif의 확장자만 허용</li>
-		</ul>
+		<table>
+			<tr><td>
+				<ul>
+					<li>최소 5개 최대 30개의 이미지</li>
+					<li>이미지 크기는 408 x 408</li>
+					<li>png 또는 gif의 확장자만 허용</li>
+				</ul>
+			</td></tr>
+		</table>
+		<div class="blank"></div>
 		<form method="post" action="" enctype="multipart/form-data">
 			<input type="file" id="uploadFile" name="uploadFile" accept=".png, .gif">
 			<input type="button" value="추가" onclick="checkFile(this.form)">
